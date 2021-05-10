@@ -15,13 +15,12 @@ export default async (req: any, res: any) => {
       const htmlString = await response.data;
       const $ = cheerio.load(htmlString);
 
-      debugger;
       let events: any[] = [];
       $('.search-event-card-wrapper').each((i:number, elem:any) => {
-        debugger;
         var linkie = $(elem).find('.search-event-card-rectangle-image .eds-event-card-content__action-link').attr('href');
         var pieces = linkie.split('?')[0].split('-');
         var id = pieces[pieces.length - 1];
+
 
         events.push({
           name: $(elem).find('.search-event-card-rectangle-image .eds-event-card__formatted-name--is-clamped').text(),
@@ -29,6 +28,7 @@ export default async (req: any, res: any) => {
           location: $(elem).find('.search-event-card-rectangle-image .eds-event-card-content__sub').text(),
           link: linkie,
           id: id,
+          index: i
         });
       });
 
