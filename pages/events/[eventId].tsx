@@ -7,8 +7,6 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import axios from 'axios';
-import eventbrite from 'eventbrite';
-
 const BorderedRow = styled(Row)`
   border-bottom: 2px solid lightgray;
   margin-bottom: 2em;
