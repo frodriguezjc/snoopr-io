@@ -70,7 +70,7 @@ const Snoop = () => {
       <Row>
         {!events && (
           <ErrorStyle>
-            <h3>Lets find some events</h3>
+            <h3>Please Look for some events</h3>
           </ErrorStyle>
         )}
       </Row>
@@ -82,19 +82,27 @@ const Snoop = () => {
                 <Card>
                   <Link href={`/events/${event.id}?name=${event.name}&date=${event.date}`}>
                     <a>
-                    <CardHeader>
-                      <h1>{event.name}</h1>
-                    </CardHeader>
+                      <CardHeader>
+                        <h1>{event.name}</h1>
+                      </CardHeader>
                     </a>
                   </Link>
 
                   <CardBody>
-                    <div>
-                      <p>👨: {event.id}</p>
-                      <p>📖: {event.link}</p>
-                      <p>🏘️: {event.location}</p>
-                      <p>⏰: {event.date}</p>
-                    </div>
+                    <Row>
+                      <Col breakPoint={{ xs: 12, sm: 3 }}>
+                        <img height="200" src="https://picsum.photos/id/237/200/300" />
+                      </Col>
+
+                      <Col breakPoint={{ xs: 12, sm: 9 }}>
+                        <div>
+                          <h4> {event.id}</h4>
+                          <p>📖: {event.link}</p>
+                          <p>🏘️: {event.location}</p>
+                          <p>⏰: {event.date}</p>
+                        </div>
+                      </Col>
+                    </Row>
                   </CardBody>
                 </Card>
               </Col>

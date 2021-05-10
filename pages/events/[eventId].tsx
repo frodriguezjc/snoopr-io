@@ -51,18 +51,30 @@ const EventView = () => {
                 <h3>{name}</h3>
               </CardHeader>
               <CardBody>
-              <Row> 
-                <Col breakPoint={{ xs: 12, sm: 10 }}>
-                  <div>
-                    <p>ID: {eventId}</p>
-                    <p>📖 Date: {date}</p>
-                  </div>
-                </Col>
-                <Col breakPoint={{ xs: 12, sm: 2 }}>
-                  <Button status="Primary" shape="SemiRound"> Enrich </Button>
-                  <Button status="Info" shape="SemiRound"> Send Email </Button>
-                  <Button status="Control" shape="SemiRound" onClick={() => router.push('/')}> Go Back </Button>
-                </Col>
+                <Row>
+                  <Col breakPoint={{ xs: 12, sm: 2 }}>
+                    <img height="200" src="https://picsum.photos/200/300" />
+                  </Col>
+                  <Col breakPoint={{ xs: 12, sm: 6 }}>
+                    <div>
+                      <p>ID: {eventId}</p>
+                      <p>📖 Date: {date}</p>
+                    </div>
+                  </Col>
+                  <Col breakPoint={{ xs: 12, sm: 2 }}>
+                    <Button status="Control">
+                      {' '}
+                      Enrich{' '}
+                    </Button>
+                    <Button status="Control">
+                      {' '}
+                      Send Email{' '}
+                    </Button>
+                    <Button status="Control" onClick={() => router.push('/dashboard')}>
+                      {' '}
+                      Go Back{' '}
+                    </Button>
+                  </Col>
                 </Row>
               </CardBody>
             </Card>

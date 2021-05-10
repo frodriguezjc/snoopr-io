@@ -16,7 +16,7 @@ export default function Login() {
   };
   return (
     <Layout title="Login">
-      <Auth title="Welcome to Snoopr">
+      <Auth title="The Best Photography services, for your events">
         <form>
           <InputGroup fullWidth>
             <input type="email" placeholder="Email Address" />
@@ -32,7 +32,7 @@ export default function Login() {
               <a>Forgot Password?</a>
             </Link>
           </Group>
-          <Button status="Success" type="button" shape="SemiRound"  onClick={() => router.push('/')} fullWidth>
+          <Button status="Success" type="button" shape="SemiRound"  onClick={() => router.push('/dashboard')} fullWidth>
             Login
           </Button>
         </form>

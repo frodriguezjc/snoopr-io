@@ -18,14 +18,14 @@ export default async (req, res) => {
 
       let events: any[] = [];
       $('.search-event-card-wrapper').each((i, elem) => {
-        var linkie = $(elem).find('.eds-event-card-content__action-link').attr('href');
+        var linkie = $(elem).find('.search-event-card-rectangle-image .eds-event-card-content__action-link').attr('href');
         var pieces = linkie.split('?')[0].split('-');
         var id = pieces[pieces.length - 1];
 
         events.push({
-          name: $(elem).find('.eds-event-card__formatted-name--is-clamped').text(),
-          date: $(elem).find('.eds-evet-card-content__sub-title').text(),
-          location: $(elem).find('.eds-event-card-content__sub').text(),
+          name: $(elem).find('.search-event-card-rectangle-image .eds-event-card__formatted-name--is-clamped').text(),
+          date: $(elem).find('.search-event-card-rectangle-image .eds-evet-card-content__sub-title').text(),
+          location: $(elem).find('.search-event-card-rectangle-image .eds-event-card-content__sub').text(),
           link: linkie,
           id: id,
         });
