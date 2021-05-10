@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Layout from 'Layouts';
+import Layout from '../Layouts';
 import { InputGroup } from '@paljs/ui/Input';
 import Col from '@paljs/ui/Col';
 import Row from '@paljs/ui/Row';
@@ -37,7 +37,7 @@ const ErrorStyle = styled.div`
 `;
 
 const Snoop = () => {
-  const [events, setEvents] = useState(null);
+  const [events, setEvents] = useState([]);
 
   const fetchEvents = async () => {
     const response = await axios('/api/eventbrite');
@@ -75,8 +75,8 @@ const Snoop = () => {
         )}
       </Row>
       <Row>
-        {events &&
-          events.map((event, index: number) => {
+        {events.length > 0 &&
+          events.map((event:any) => {
             return (
               <Col breakPoint={{ xs: 12, sm: 6 }}>
                 <Card>

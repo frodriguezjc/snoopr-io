@@ -12,7 +12,7 @@ import { Button } from '@paljs/ui/Button';
 import { Menu, MenuRefObject } from '@paljs/ui/Menu';
 import Link from 'next/link';
 import menuItems from './menuItem';
-import SEO, { SEOProps } from 'components/SEO';
+import SEO, { SEOProps } from '../components/SEO';
 
 const getDefaultTheme = (): DefaultTheme['name'] => {
   if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {

@@ -1,16 +1,11 @@
 import { Button } from '@paljs/ui/Button';
 import { Card, CardBody, CardHeader } from '@paljs/ui/Card';
 import Col from '@paljs/ui/Col';
-import { InputGroup } from '@paljs/ui/Input';
 import Row from '@paljs/ui/Row';
-import Layout from 'Layouts';
-import React, { useState } from 'react';
+import Layout from '../../Layouts';
+import React from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
-
-const Input = styled(InputGroup)`
-  margin-bottom: 10px;
-`;
 
 const BorderedRow = styled(Row)`
   border-bottom: 2px solid lightgray;
@@ -37,7 +32,7 @@ const ErrorStyle = styled.div`
 const EventView = () => {
   const router = useRouter();
   let { eventId, name, date } = router.query;
-  const [events, setEvents] = useState(null);
+  
 
   return (
     <Layout title="EventDetail">

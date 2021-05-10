@@ -5,9 +5,9 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import Auth, { Group } from 'components/Auth';
-import Socials from 'components/Auth/Socials';
-import Layout from 'Layouts';
+import Auth, { Group } from '../../components/Auth';
+import Socials from '../../components/Auth/Socials';
+import Layout from '../../Layouts';
 
 export default function Login() {
   const router = useRouter();

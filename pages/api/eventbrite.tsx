@@ -1,9 +1,9 @@
 const axios = require('axios'); // 1
-
 const cheerio = require('cheerio'); // 1
 
-export default async (req, res) => {
+export default async (req: any, res: any) => {
   // 2
+  console.log(req.body);
     // 3
     var location = 'ca--san-francisco';
     var query = 'gala';
@@ -15,9 +15,10 @@ export default async (req, res) => {
       const htmlString = await response.data;
       const $ = cheerio.load(htmlString);
 
-
+      debugger;
       let events: any[] = [];
-      $('.search-event-card-wrapper').each((i, elem) => {
+      $('.search-event-card-wrapper').each((i:number, elem:any) => {
+        debugger;
         var linkie = $(elem).find('.search-event-card-rectangle-image .eds-event-card-content__action-link').attr('href');
         var pieces = linkie.split('?')[0].split('-');
         var id = pieces[pieces.length - 1];
