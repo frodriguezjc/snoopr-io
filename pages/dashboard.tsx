@@ -41,8 +41,6 @@ const Snoop = () => {
 
   const fetchEvents = async () => {
     const response = await axios('/api/eventbrite');
-
-    debugger;
     setEvents(response.data.events);
   };
 
@@ -61,7 +59,6 @@ const Snoop = () => {
         </Col>
         <Col breakPoint={{ xs: 12, sm: 2 }}>
           <Button shape="SemiRound" onClick={fetchEvents}>
-            {' '}
             Snoop
           </Button>
         </Col>
@@ -76,7 +73,7 @@ const Snoop = () => {
       </Row>
       <Row>
         {events.length > 0 &&
-          events.map((event:any) => {
+          events.map((event: any) => {
             return (
               <Col breakPoint={{ xs: 12, sm: 6 }}>
                 <Card>
@@ -91,7 +88,7 @@ const Snoop = () => {
                   <CardBody>
                     <Row>
                       <Col breakPoint={{ xs: 12, sm: 3 }}>
-                        <img height="200" src="https://picsum.photos/id/237/200/300" />
+                        <img height="200" src="https://picsum.photos/200/300" />
                       </Col>
 
                       <Col breakPoint={{ xs: 12, sm: 9 }}>

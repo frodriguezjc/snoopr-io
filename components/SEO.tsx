@@ -13,8 +13,8 @@ const SEO: React.FC<SEOProps> = ({ description, keywords, title }) => (
     <meta property="og:url" content="" />
    
     <meta property="og:image" content="" />
-    <link rel="icon" type="image/png" href="/icons/icon-72x72.png" />
-    <link rel="apple-touch-icon" type="image/png" href="/icons/icon-72x72.png" />
+    <link rel="icon" type="image/png" href="/snoopr-logo.png" />
+    <link rel="apple-touch-icon" type="image/png" href="/snoopr-logo.png" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171177495-4"></script>
     <script
       dangerouslySetInnerHTML={{
