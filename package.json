@@ -1,12 +1,10 @@
 {
   "name": "snoopr-io",
   "private": true,
-  "description": "Advanced tool to sell Photography Services",
+  "description": "The best Photography Services for your events" ,
   "version": "1.0.1",
   "author": "Frederik Rodriguez",
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "27.1.0",
-    "@ckeditor/ckeditor5-react": "3.0.2",
     "@paljs/icons": "1.0.5",
     "@paljs/ui": "1.1.1",
     "@tinymce/tinymce-react": "3.12.3",
@@ -16,8 +14,6 @@
     "chownr": "^1.1.4",
     "next": "^10.2.0",
     "node-fetch": "^2.6.1",
-    "puppeteer": "^9.1.1",
-    "puppeteer-core": "^9.1.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "styled-components": "5.2.3"
@@ -37,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/paljs/nextjs-admin-template"
+    "url": "https://github.com/frodriguezjc/snoopr-io"
   },
   "devDependencies": {
     "@types/node": "15.0.1",
