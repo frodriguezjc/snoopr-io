@@ -5,9 +5,7 @@ import Col from '@paljs/ui/Col';
 import Row from '@paljs/ui/Row';
 import { Button } from '@paljs/ui/Button';
 import axios from 'axios';
-
-const fetch = require('node-fetch');
-const cheerio = require('cheerio');
+import Link from 'next/link';
 
 import styled from 'styled-components';
 import { Card, CardBody, CardHeader } from '@paljs/ui/Card';
@@ -41,15 +39,9 @@ const ErrorStyle = styled.div`
 const Snoop = () => {
   const [events, setEvents] = useState(null);
 
-  const fetchData = async () => {
-    const response = await axios.get('https://www.anapioficeandfire.com/api/books?pageSize=30');
-
-    setEvents(response.data);
-  };
-
   const fetchEvents = async () => {
     const response = await axios('/api/eventbrite');
-    
+
     debugger;
     setEvents(response.data.events);
   };
@@ -88,9 +80,14 @@ const Snoop = () => {
             return (
               <Col breakPoint={{ xs: 12, sm: 6 }}>
                 <Card>
-                  <CardHeader>
-                  <h1>{event.name}</h1>
-                  </CardHeader>
+                  <Link href={`/events/${event.id}?name=${event.name}&date=${event.date}`}>
+                    <a>
+                    <CardHeader>
+                      <h1>{event.name}</h1>
+                    </CardHeader>
+                    </a>
+                  </Link>
+
                   <CardBody>
                     <div>
                       <p>👨: {event.id}</p>
